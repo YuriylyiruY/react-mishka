@@ -1,0 +1,161 @@
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+
+@mixin font($weight, $size, $line-height) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@media (min-width: $medium) {
+  .Nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.color1 {
+  color: rgb(33, 9, 71);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font(700, 17px, 24px);
+}
+.color2 {
+  color: rgb(240, 16, 72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include font(700, 17px, 24px);
+}
+
+@media (min-width: $medium) {
+  .color1 {
+    color: rgb(33, 9, 71);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  .color2 {
+    color: rgb(240, 16, 72);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
+@media (min-width: $desktop) {
+  .color1 {
+    width: 33%;
+  }
+  .color2 {
+    width: 50%;
+  }
+}
+.navDesktopPart {
+  display: none;
+}
+
+@media (min-width: $medium) {
+  .NavPart1 {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .NavPart2 {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: $desktop) {
+  .NavPart1 {
+    width: 60%;
+  }
+
+  .NavPart2 {
+    width: 40%;
+  }
+}
+
+.NavMishka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: $medium) {
+  .NavMishka {
+    width: 99%;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: $desktop) {
+  .NavMishka {
+    order: 2;
+    width: 33%;
+    justify-content: center;
+  }
+
+  .navDesktopPart {
+    display: block;
+    order: 3;
+  }
+}
+
+@media (min-width: $mobile) {
+  .svgMishkaMobile {
+    display: block;
+    fill: aqua;
+    &:hover {
+      fill: yellow;
+    }
+    &:active {
+      fill: greenyellow;
+    }
+  }
+  .svgMishkaTablet {
+    display: none;
+  }
+  .svgMishkaDesktop {
+    display: none;
+  }
+}
+@media (min-width: $medium) {
+  .svgMishkaMobile {
+    display: none;
+  }
+  .svgMishkaTablet {
+    display: block;
+    fill: red;
+    &:hover {
+      fill: yellow;
+    }
+    &:active {
+      fill: greenyellow;
+    }
+  }
+  .svgMishkaDesktop {
+    display: none;
+  }
+}
+@media (min-width: $desktop) {
+  .svgMishkaDesktop {
+    display: block;
+    fill: aqua;
+    &:hover {
+      fill: yellow;
+    }
+    &:active {
+      fill: greenyellow;
+    }
+  }
+  .svgMishkaTablet {
+    display: none;
+  }
+}

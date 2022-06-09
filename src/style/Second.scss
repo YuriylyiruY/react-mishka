@@ -1,0 +1,56 @@
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+
+
+@media (min-width: $mobile) {
+    .svgMishkaMobile {
+      display: block;
+      fill: aqua;
+      &:hover {
+        fill: yellow;
+      }
+      &:active {
+        fill: greenyellow;
+      }
+    }
+    .svgMishkaTablet {
+      display: none;
+    }
+    .svgMishkaDesktop {
+      display: none;
+    }
+  }
+  @media (min-width: $medium) {
+    .svgMishkaMobile {
+      display: none;
+    }
+    .svgMishkaTablet {
+      display: block;
+      fill: red;
+      &:hover {
+        fill: yellow;
+      }
+      &:active {
+        fill: greenyellow;
+      }
+    }
+    .svgMishkaDesktop {
+      display: none;
+    }
+  }
+  @media (min-width: $desktop) {
+    .svgMishkaDesktop {
+      display: block;
+      fill: aqua;
+      &:hover {
+        fill: yellow;
+      }
+      &:active {
+        fill: greenyellow;
+      }
+    }
+    .svgMishkaTablet {
+      display: none;
+    }
+  }
