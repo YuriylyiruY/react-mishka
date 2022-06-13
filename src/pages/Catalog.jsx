@@ -8,7 +8,7 @@ export const Catalog = () => {
   
   return (
     <div className="App" >
-      <div>Cataloooooooooooooog</div>
+      <div>Catalog</div>
       <NavHeader/>
     </div>
   );

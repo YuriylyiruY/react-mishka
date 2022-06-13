@@ -28,8 +28,13 @@
   font-size: $size;
   line-height:$line-height;
 }
-
+body{
+  margin:0;
+  
+}
 .App {
   font-family: "OpenSansMedium";
+  width:100%;
+  background-color: #ffffff;
 }
 

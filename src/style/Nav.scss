@@ -16,14 +16,27 @@ $desktop: 1150px;
 }
 
 .color1 {
-  color: rgb(33, 9, 71);
+  color: rgba($color: #000000, $alpha: 1);
+  &:hover {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+  &:active {
+    color: rgba($color: #000000, $alpha: 0.3);
+  }
   display: flex;
   align-items: center;
   justify-content: center;
   @include font(700, 17px, 24px);
+  text-decoration: none;
 }
 .color2 {
-  color: rgb(240, 16, 72);
+  color: rgba($color: #000000, $alpha: 1);
+  &:hover {
+    color: rgba($color: #000000, $alpha: 0.6);
+  }
+  &:active {
+    color: rgba($color: #000000, $alpha: 0.3);
+  }
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,18 +45,18 @@ $desktop: 1150px;
 
 @media (min-width: $medium) {
   .color1 {
-    color: rgb(33, 9, 71);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 50%;
+    height: 72px;
   }
   .color2 {
-    color: rgb(240, 16, 72);
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 50%;
+    height: 72px;
   }
 }
 @media (min-width: $desktop) {
@@ -54,8 +67,18 @@ $desktop: 1150px;
     width: 50%;
   }
 }
+
 .navDesktopPart {
   display: none;
+}
+.navMobilePart {
+  display: none;
+}
+@media (min-width: $medium) {
+  .navMobilePart {
+    display: block;
+    width: 100%;
+  }
 }
 
 @media (min-width: $medium) {
@@ -92,6 +115,7 @@ $desktop: 1150px;
 @media (min-width: $medium) {
   .NavMishka {
     width: 99%;
+    height: 72px;
     justify-content: flex-start;
   }
 }
@@ -111,12 +135,12 @@ $desktop: 1150px;
 @media (min-width: $mobile) {
   .svgMishkaMobile {
     display: block;
-    fill: aqua;
+    fill: rgba($color: #000000, $alpha: 1);
     &:hover {
-      fill: yellow;
+      fill: rgba($color: #000000, $alpha: 0.6);
     }
     &:active {
-      fill: greenyellow;
+      fill: rgba($color: #000000, $alpha: 0.3);
     }
   }
   .svgMishkaTablet {
@@ -132,12 +156,12 @@ $desktop: 1150px;
   }
   .svgMishkaTablet {
     display: block;
-    fill: red;
+    fill: rgba($color: #000000, $alpha: 1);
     &:hover {
-      fill: yellow;
+      fill: rgba($color: #000000, $alpha: 0.6);
     }
     &:active {
-      fill: greenyellow;
+      fill: rgba($color: #000000, $alpha: 0.3);
     }
   }
   .svgMishkaDesktop {
@@ -147,15 +171,72 @@ $desktop: 1150px;
 @media (min-width: $desktop) {
   .svgMishkaDesktop {
     display: block;
-    fill: aqua;
+    fill: rgba($color: #000000, $alpha: 1);
     &:hover {
-      fill: yellow;
+      fill: rgba($color: #000000, $alpha: 0.6);
     }
     &:active {
-      fill: greenyellow;
+      fill: rgba($color: #000000, $alpha: 0.3);
     }
   }
   .svgMishkaTablet {
     display: none;
   }
+}
+@media (min-width: $medium) {
+  .navSandvichButton {
+    display: none;
+  }
+  .navCloseButton {
+    display: none;
+  }
+}
+.navHiddenClass,
+.navHiddenClassDesktop {
+  display: none;
+}
+@media (min-width: $desktop) {
+  .navHiddenClassDesktop {
+    display: block;
+  }
+}
+@media (min-width: $medium) {
+  .navHiddenClass {
+    display: block;
+  }
+  .navSandvichButton,
+  .navCloseButton {
+    display: none;
+  }
+}
+.navCart::before{
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding-top: 40px;
+  content: url('./images/svgImg/cart.svg.svg');
+}
+.navCart:hover::before{
+    content: url('./images/svgImg/cartHover.svg.svg');
+}
+.navCart:active::before{
+    content: url('./images/svgImg/cartActive.svg.svg');
+  
+}
+.navSearch::before{
+  width: 40px;
+  height: 40px;
+  display: block;
+  content: url('./images/svgImg/csearch.svg.svg');
+  
+}
+.navSearch:hover::before{
+  
+    content: url('./images/svgImg/csearchHover.svg.svg');
+  
+}
+.navSearch:active::before{
+  
+  content: url('./images/svgImg/csearchActive.svg.svg');
+  
 }

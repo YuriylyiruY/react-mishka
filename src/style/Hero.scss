@@ -1,0 +1,26 @@
+.hero_text {
+  width: 100%;
+  
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+   background-color: rgb(249, 249, 249);
+}
+.hero_img {
+     display: flex;
+    align-items: center;
+  justify-content: center;
+    
+  margin:0 auto;
+  background-image: url("./images/img/hero-mobile@1x.png");
+  background-position: center;
+
+  background-repeat: no-repeat;
+  width: 320px;
+  height: 400px;
+  display: flex;
+}
+.hero_title{
+    text-align: center;
+  width:260px;
+}
