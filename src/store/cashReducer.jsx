@@ -1,19 +1,28 @@
 
 
+
 const initialState = {
-    cash :100000000,
+    csh :100000000,
+    
  }
 
- export const cashReducer =(state = initialState, { type, payload,gop }) => {
-  switch (type) {
+
+
+
+ const cashReducer =(state = initialState, action) => {
+  switch (action.type) {
 
   case "ADD_MONEY":
-    return { ...state, cash: state.cash + payload + gop  }
+   console.log(state);
+    return { ...state, csh: state.csh + action.payload}
 
     case "GET_MONEY":
-    return { ...state, cash: state.cash - payload + gop}
+    return { ...state, csh: state.csh - action.payload}
 
   default:
     return state
   }
+  
+
 }
+export default cashReducer;

@@ -1,26 +1,269 @@
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+
+///////////////////////////
+//colors
+$heroBackgroundColor: rgb(249, 249, 249);
+$ec: #ececec;
+.hero {
+  border-top: 2px solid $ec;
+  background-color: $heroBackgroundColor;
+}
+
+@media (min-width: $medium) {
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: none;
+    height: 647px;
+    width: 100%;
+  }
+}
+@media (min-width: $desktop) {
+  .hero {
+    height: 665px;
+  }
+}
 .hero_text {
   width: 100%;
-  
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-   background-color: rgb(249, 249, 249);
+  height: 342px;
+}
+@media (min-width: $medium) {
+  .hero_text {
+    display: flex;
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 50px;
+    height: 527px;
+    width: 100%;
+  }
+}
+@media (min-width: $desktop) {
+  .hero_text {
+    height: 536px;
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 .hero_img {
-     display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
-    
-  margin:0 auto;
+  margin: 0 auto;
   background-image: url("./images/img/hero-mobile@1x.png");
+  background-size: 320px 400px;
   background-position: center;
 
   background-repeat: no-repeat;
   width: 320px;
   height: 400px;
-  display: flex;
+
+  @media (min-width: $medium) {
+    & {
+      background-image: url("./images/img/hero-medium@1x.png");
+      background-size: 769px 734px;
+      background-position: center;
+      height: 530px;
+      width: 100%;
+    }
+  }
+  @media (min-width: $desktop) {
+    & {
+      background-image: url("./images/img/hero-desktop@1x.png");
+      background-size: 1150px 742px;
+      background-position: center;
+      width: 1150px;
+      height: 547px;
+    }
+  }
 }
-.hero_title{
-    text-align: center;
-  width:260px;
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  .hero_img {
+    background-image: url("./images/img/hero-mobile@2x.png");
+    @media (min-width: $medium) {
+      & {
+        background-image: url("./images/img/hero-medium@2x.png");
+      }
+    }
+    @media (min-width: $desktop) {
+      & {
+        background-image: url("./images/img/hero-desktop@2x.png");
+      }
+    }
+  }
+}
+.hero_title {
+  position: relative;
+  text-align: center;
+  width: 260px;
+  bottom: 54px;
+}
+@media (min-width: $medium) {
+  .hero_title {
+    min-width: 476px;
+    bottom: 117px;
+  }
+}
+@media (min-width: $desktop) {
+  .hero_title {
+    min-width: 581px;
+    bottom: 126px;
+  }
+}
+
+.hero_lightGrinBlok {
+  display: flex;
+  width: 100%;
+  height: 103px;
+  background-color: #63d1bb;
+  transition: height;
+  justify-content: space-between;
+}
+.hero_lightGrinBlok:hover {
+  background-color: #59d5bc;
+  height: 108px;
+}
+.hero_lightGrinBlok:active {
+  background-color: #59d5bc;
+  height: 108px;
+}
+@media (min-width: $medium) {
+  .hero_twoBloks {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 auto;
+    height: 115px;
+    width: 100%;
+  }
+}
+@media (min-width: $medium) {
+  .hero_lightGrinBlok {
+    width: 44%;
+    height: 118px;
+  }
+}
+
+@media (min-width: $medium) {
+  .hero_lightGrinBlok:hover {
+    width: 44%;
+    height: 123px;
+  }
+}
+.hero_darkGrinBlok {
+  display: flex;
+  width: 100%;
+  height: 103px;
+  background-color: #56c3b2;
+  transition: height;
+  justify-content: space-between;
+  
+}
+.hero_darkGrinBlok:hover {
+  background-color: #59d5bc;
+  height: 108px;
+}
+.hero_darkGrinBlok:active {
+  background-color: #59d5bc;
+  height: 108px;
+}
+
+@media (min-width: $medium) {
+  .hero_darkGrinBlok {
+    width: 44%;
+    height: 118px;
+  }
+}
+@media (min-width: $medium) {
+  .hero_darkGrinBlok:hover {
+    width: 44%;
+    height: 123px;
+  }
+}
+
+.hero_lightGrinBlok::after {
+  width: 40px;
+  height: 62px;
+  content: url("./images/svgImg/interior.svg.svg");
+  position: relative;
+  right: 33px;
+  top: 19px;
+}
+.hero_lightGrinBlok:hover::after {
+  content: url("./images/svgImg/interiorHover.svg.svg");
+}
+.hero_lightGrinBlok:active::after {
+  content: url("./images/svgImg/interiorActive.svg.svg");
+}
+.hero_darkGrinBlok::after {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  right: 27px;
+  top: 19px;
+  content: url("./images/svgImg/toyCube.svg.svg");
+}
+.hero_darkGrinBlok:hover::after {
+  content: url("./images/svgImg/toyHover.svg");
+}
+.hero_darkGrinBlok:active::after {
+  content: url("./images/svgImg/toyActive.svg");
+}
+
+.hero_darkGrinBlokInteriorItemsChildrensToys {
+  margin: 0;
+  color:#ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  width: 130px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 25px;
+  left: 17px;
+}
+.hero_lightGrinBlokInteriorItems {
+  margin: 0;
+  color:#ffffff;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  width: 130px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 25px;
+  left: 25px;
+}
+
+.hero_zigzag {
+  display: none;
+}
+@media (min-width: $medium) {
+  .hero_zigzag {
+    position: relative;
+    display: flex;
+    width: 200%;
+    height: auto;
+    bottom: 21px;
+  }
+@media (min-width: $desktop) {
+  .hero_zigzag {
+    bottom: 19px;
+  }
+}
 }

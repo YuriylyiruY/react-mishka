@@ -1,0 +1,138 @@
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+////////////////////////////
+/// hover active
+@media (min-width: $mobile) {
+  .svgMishkaFooter {
+    display: block;
+    fill: #000000;
+    &:hover {
+      fill: #46c1ae;
+    }
+    &:active {
+      fill: rgba(70, 193, 174, 0.3);
+    }
+  }
+}
+
+.footer_conectInstSvg,
+.footer_conectFbSvg,
+.footer_conectTwitSvg {
+  display: block;
+  fill: #000000;
+  &:hover {
+    fill: #46c1ae;
+  }
+  &:active {
+    fill: rgba(70, 193, 174, 0.3);
+  }
+}
+
+.footer_sansei::after {
+  content: url("../style/images/svgImg/htmlacademy.svg.svg");
+  position: relative;
+  left: 0;
+  top: 2px;
+}
+.footer_sansei:hover::after {
+  content: url("../style/images/svgImg/htmlacademyhover.svg.svg");
+}
+.footer_sansei:active::after {
+  content: url("../style/images/svgImg/htmlacademyactive.svg.svg");
+}
+/////////////////////////////////////////////////////
+/// end  hover and active
+//////////////////////////////////////////////
+/// footerMishka
+.footer {
+  margin-top: 30px;
+  background-color: #f1f1f1;
+}
+
+@media (min-width: $medium) {
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+}
+.footer_mishkaWrap {
+  display: none;
+}
+
+@media (min-width: $medium) {
+  .footer_mishkaWrap {
+    width: 250px;
+    height: 143px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_mishka {
+    width: 100%;
+    height: 79px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/////end mishka footer
+/////////////////////////////////////////////////////
+/// conect Fb etc
+.footer_conectWrap {
+  width: 100%;
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_conect {
+  width: 35%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $medium) {
+.footer_conectWrap {
+  width: 300px;
+  height: 143px;
+  
+}
+.footer_conect {
+  width: 49%;
+ 
+}
+}
+/////////end conect
+////////////////////////////////////
+/// sansei
+.footer_sanseiWrap {
+  width: 100%;
+  height: 79px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_sansei {
+  width: 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: $medium) {
+  .footer_sanseiWrap {
+    width: 250px;
+    height: 143px;
+  }
+  .footer_sansei {
+    width: 55%;
+  }
+}
+/////////////////////////////////
+/// end sansei

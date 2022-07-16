@@ -1,64 +1,82 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { NavSvg } from "./NavSvg";
-import { NavButton } from "./NavButton";
+import { NavSvg } from "./navSvg";
+import { NavButton } from "./navButton";
 
 const NavHeader = () => {
-  const navPart1 = [
+  const navPartLeft = [
     {
       id: 1,
       title: "Каталог товаров",
-      className: "color1 navHiddenClass",
+      className: "navShareProperties navMediumPart navCatalogOfProducts    navHiddenClass",
+      classInsideContent: "navCatalogOfProductsInsideContent",
       page: "/catalog",
     },
     {
       id: 2,
       title: "Вязание на заказ",
-      className: "color1 navHiddenClass",
+      className: "navShareProperties navMediumPart navCustomKnitting  navHiddenClass",
+      classInsideContent: "navCustomKnittingInsideContent",
       page: "/form",
     },
     {
       id: 3,
       title: "Новые поступления",
-      className: "color1 navDesktopPart navHiddenClassDesktop",
-      page: "",
+   
+      className: "navShareProperties  navDesktopPart navNewAcquisitions  navHiddenClassDesktop",
+      classInsideContent: "navNewAcquisitionsInsideContent",
+      page: "/reducer",
     },
     {
       id: 4,
       title: "Распродажа",
-      className: "color1 navDesktopPart navHiddenClassDesktop",
+      className: "navShareProperties navDesktopPart navSale  navHiddenClassDesktop",
+      classInsideContent: "navSaleInsideContent",
       page: "",
     },
   ];
-  const navPart2 = [
-    { id: 1, title: "Поиск по сайту", className: "color2 navSearch navHiddenClass" },
-    { id: 2, title: "Корзина: пока пуста", className: "color2 navCart navHiddenClass" },
+  const navPartRight = [
     {
-      id: 3,
+      id: 5,
+      title: "Поиск по сайту",
+      className: "navShareProperties navMediumPart navSearch navHiddenClass",
+      classInsideContent: "navSearchInsideContent",
+    },
+    {
+      id: 6,
+      title: "Корзина: пока пуста",
+      className: "navShareProperties navMediumPart navCart navHiddenClass",
+      classInsideContent: "navCartInsideContent",
+    },
+    {
+      id: 7,
       title: "Бесплатная доставка по России",
-      className: "color2 navMobilePart navHiddenClass",
+      className: "navShareProperties  navMobilePart navFreeShipping navHiddenClass",
+      classInsideContent: "navFreeShippingInsideContent",
     },
   ];
 
   return (
-    <div className="Nav">
-      <div className="NavPart1">
-        <div className="NavMishka">
-          <Link to="/" className="HeaderMishka">
+    <div className="nav">
+      <div className="navPartLeft">
+        <div className="navMishka">
+          <Link to="/" className="navHeaderMishka">
             <NavSvg />
           </Link>
           <NavButton />
         </div>
 
-        {navPart1.map((part) => (
+        {navPartLeft.map((part) => (
           <Link to={part.page} className={part.className} key={part.id}>
-            {part.title}
+            <div className={part.classInsideContent}>{part.title}</div>
           </Link>
         ))}
       </div>
-      <div className="NavPart2">
-        {navPart2.map((part) => (
-          <div className={part.className}>{part.title}</div>
+      <div className="navPartRight">
+        {navPartRight.map((part) => (
+          <div className={part.className} key={part.id}>
+            <div className={part.classInsideContent}>{part.title}</div>
+          </div>
         ))}
       </div>
     </div>

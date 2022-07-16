@@ -7,140 +7,363 @@ $desktop: 1150px;
   font-size: $size;
   line-height: $line-height;
 }
-
+// Colors
+$blackHard: rgba(
+  $color: #000000,
+  $alpha: 1,
+);
+$blackMidlle: rgba(
+  $color: #000000,
+  $alpha: 0.6,
+);
+$blackLitle: rgba(
+  $color: #000000,
+  $alpha: 0.3,
+);
+$ec: #ececec;
+$heroBackgroundColor: rgb(249, 249, 249);
+////////////////////////////////////////////////////
 @media (min-width: $medium) {
-  .Nav {
+  .nav {
     display: flex;
     justify-content: space-between;
   }
 }
+// Навигация разбита на два блока левый и правый
+@media (min-width: $medium) {
+  .navPartLeft {
+    width: 49%;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-.color1 {
-  color: rgba($color: #000000, $alpha: 1);
+  .navPartRight {
+    width: 51%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: $desktop) {
+  .navPartLeft {
+    width: 60%;
+  }
+
+  .navPartRight {
+    width: 40%;
+  }
+}
+/////////////////////////////////////////////////////////
+// Общие свойства всех блоков
+.navShareProperties {
+  border-top: 2px solid $ec;
+
+  color: $blackHard;
   &:hover {
-    color: rgba($color: #000000, $alpha: 0.6);
+    color: $blackMidlle;
   }
   &:active {
-    color: rgba($color: #000000, $alpha: 0.3);
+    color: $blackLitle;
   }
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 79px;
+  width: 100%;
   @include font(700, 17px, 24px);
   text-decoration: none;
+  z-index: 33;
 }
-.color2 {
-  color: rgba($color: #000000, $alpha: 1);
-  &:hover {
-    color: rgba($color: #000000, $alpha: 0.6);
-  }
-  &:active {
-    color: rgba($color: #000000, $alpha: 0.3);
-  }
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include font(700, 17px, 24px);
-}
-
 @media (min-width: $medium) {
-  .color1 {
+  .navShareProperties {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 50%;
-    height: 72px;
   }
-  .color2 {
+}
+@media (min-width: $desktop) {
+  .navShareProperties {
+    width: 33%;
+  }
+}
+//////////////////////////////////////////////////////////////////
+// Регулировка каждого блока по отдельности
+// Левый блок
+.navCatalogOfProducts {
+  padding-right: 0;
+  letter-spacing: 0.5px;
+}
+@media (min-width: $medium) {
+  .navCatalogOfProducts {
+    background-color: $heroBackgroundColor;
+    font-size: 15px;
+  }
+}
+@media (min-width: $desktop) {
+  .navCatalogOfProducts {
+    background-color: inherit;
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $medium) {
+  .navCatalogOfProductsInsideContent {
+    width: 100%;
+    padding-left: 50px;
+  }
+}
+
+.navCustomKnitting {
+  letter-spacing: 0.5px;
+}
+@media (min-width: $medium) {
+  .navCustomKnitting {
+    background-color: $heroBackgroundColor;
+    font-size: 15px;
+  }
+}
+@media (min-width: $desktop) {
+  .navCustomKnitting {
+    background-color: inherit;
+    font-size: 17px;
+  }
+}
+.navCustomKnittingInsideContent {
+  padding-left: 5px;
+}
+@media (min-width: $medium) {
+  .navCustomKnittingInsideContent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .navNewAcquisitions {
+    height: 81px;
+    background-color: $heroBackgroundColor;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .navNewAcquisitionsInsideContent {
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .navSale {
+    height: 81px;
+    width: 67%;
+    background-color: $heroBackgroundColor;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .navSaleInsideContent {
+    padding-left: 11px;
+  }
+}
+
+///////////////////////////////////////////////
+// Правый блок
+.navSearch {
+  letter-spacing: 0.5px;
+  @media (min-width: $medium) {
+    padding-right: 0;
+    font-size: 0;
+    border-left: 2px solid $ec;
+    border-right: 2px solid $ec;
+    border-top: none;
+    width: 86px;
+  }
+  @media (min-width: $desktop) {
+    height: 81px;
+  }
+}
+.navSearchInsideContent {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+}
+@media (min-width: $medium) {
+  .navSearchInsideContent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 0;
+  }
+}
+
+.navSearchInsideContent::before {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding-top: 20px;
+  margin: 0;
+  content: url("./images/svgImg/csearch.svg.svg");
+}
+.navSearchInsideContent:hover::before {
+  content: url("./images/svgImg/csearchHover.svg.svg");
+}
+.navSearchInsideContent:active::before {
+  content: url("./images/svgImg/csearchActive.svg.svg");
+}
+@media (min-width: $medium) {
+  .navSearchInsideContent::before {
+    width: 70px;
+    height: 70px;
+    padding-top: 50px;
+    padding-left: 35px;
+    display: block;
+
+    content: url("./images/svgImg/csearch.svg.svg");
+  }
+}
+
+.navCart {
+  padding-right: 13px;
+  letter-spacing: 0.5px;
+  @media (min-width: $medium) {
+    padding-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 305px;
+    border-top: none;
+  }
+}
+
+.navCartInsideContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: $medium) {
+  .navCartInsideContent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 50px;
+  }
+}
+
+.navCartInsideContent::before {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: block;
+  padding-top: 20px;
+  right: 3px;
+  margin: 0;
+  content: url("./images/svgImg/cart.svg.svg");
+}
+.navCartInsideContent:hover::before {
+  content: url("./images/svgImg/cartHover.svg.svg");
+}
+.navCartInsideContent:active::before {
+  content: url("./images/svgImg/cartActive.svg.svg");
+}
+
+@media (min-width: $medium) {
+  .navFreeShipping {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 50%;
-    height: 72px;
+    background-color: $heroBackgroundColor;
+    font-size: 15px;
   }
 }
 @media (min-width: $desktop) {
-  .color1 {
-    width: 33%;
-  }
-  .color2 {
+  .navFreeShipping {
     width: 50%;
+    height: 81px;
+    
   }
 }
 
-.navDesktopPart {
-  display: none;
+.navFreeShippingInsideContent {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
 }
+
+////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+// Появление удаление блоков от ширины экрана
 .navMobilePart {
   display: none;
 }
 @media (min-width: $medium) {
   .navMobilePart {
-    display: block;
+    display: flex;
     width: 100%;
   }
 }
-
-@media (min-width: $medium) {
-  .NavPart1 {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  .NavPart2 {
-    width: 50%;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-  }
+.navDesktopPart {
+  display: none;
 }
 @media (min-width: $desktop) {
-  .NavPart1 {
-    width: 60%;
-  }
-
-  .NavPart2 {
-    width: 40%;
-  }
-}
-
-.NavMishka {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@media (min-width: $medium) {
-  .NavMishka {
-    width: 99%;
-    height: 72px;
-    justify-content: flex-start;
-  }
-}
-@media (min-width: $desktop) {
-  .NavMishka {
-    order: 2;
-    width: 33%;
-    justify-content: center;
-  }
-
   .navDesktopPart {
-    display: block;
+    display: flex;
     order: 3;
   }
 }
+////////////////////////////////////////////////////////////////
 
+//Логотип
+.navMishka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 79px;
+}
+@media (min-width: $medium) {
+  .navMishka {
+    width: 99%;
+    height: 79px;
+    justify-content: flex-start;
+  }
+}
+@media (min-width: $desktop) {
+  .navMishka {
+    order: 2;
+    width: 34%;
+    height: 81px;
+    justify-content: center;
+  }
+}
+
+.navHeaderMishka {
+  margin-left: 91px;
+  @media (min-width: $medium) {
+    margin: 0;
+    padding-left: 50px;
+  }
+}
 @media (min-width: $mobile) {
   .svgMishkaMobile {
     display: block;
-    fill: rgba($color: #000000, $alpha: 1);
+    fill: $blackHard;
     &:hover {
-      fill: rgba($color: #000000, $alpha: 0.6);
+      fill: $blackMidlle;
     }
     &:active {
-      fill: rgba($color: #000000, $alpha: 0.3);
+      fill: $blackLitle;
     }
   }
   .svgMishkaTablet {
@@ -156,12 +379,12 @@ $desktop: 1150px;
   }
   .svgMishkaTablet {
     display: block;
-    fill: rgba($color: #000000, $alpha: 1);
+    fill: $blackHard;
     &:hover {
-      fill: rgba($color: #000000, $alpha: 0.6);
+      fill: $blackLitle;
     }
     &:active {
-      fill: rgba($color: #000000, $alpha: 0.3);
+      fill: $blackLitle;
     }
   }
   .svgMishkaDesktop {
@@ -171,17 +394,40 @@ $desktop: 1150px;
 @media (min-width: $desktop) {
   .svgMishkaDesktop {
     display: block;
-    fill: rgba($color: #000000, $alpha: 1);
+    fill: $blackHard;
     &:hover {
-      fill: rgba($color: #000000, $alpha: 0.6);
+      fill: $blackMidlle;
     }
     &:active {
-      fill: rgba($color: #000000, $alpha: 0.3);
+      fill: $blackLitle;
     }
   }
   .svgMishkaTablet {
     display: none;
   }
+}
+///////////////////////////////////////
+
+// Скрывающие блоки классы
+.navHiddenClass,
+.navHiddenClassDesktop {
+  display: none;
+}
+@media (min-width: $medium) {
+  .navHiddenClass {
+    display: flex;
+  }
+}
+@media (min-width: $desktop) {
+  .navHiddenClassDesktop {
+    display: flex;
+  }
+}
+
+///////////////////////////////////
+//Кнопка логотипа
+.navButton {
+  margin-left: 67px;
 }
 @media (min-width: $medium) {
   .navSandvichButton {
@@ -191,52 +437,4 @@ $desktop: 1150px;
     display: none;
   }
 }
-.navHiddenClass,
-.navHiddenClassDesktop {
-  display: none;
-}
-@media (min-width: $desktop) {
-  .navHiddenClassDesktop {
-    display: block;
-  }
-}
-@media (min-width: $medium) {
-  .navHiddenClass {
-    display: block;
-  }
-  .navSandvichButton,
-  .navCloseButton {
-    display: none;
-  }
-}
-.navCart::before{
-  width: 40px;
-  height: 40px;
-  display: block;
-  padding-top: 40px;
-  content: url('./images/svgImg/cart.svg.svg');
-}
-.navCart:hover::before{
-    content: url('./images/svgImg/cartHover.svg.svg');
-}
-.navCart:active::before{
-    content: url('./images/svgImg/cartActive.svg.svg');
-  
-}
-.navSearch::before{
-  width: 40px;
-  height: 40px;
-  display: block;
-  content: url('./images/svgImg/csearch.svg.svg');
-  
-}
-.navSearch:hover::before{
-  
-    content: url('./images/svgImg/csearchHover.svg.svg');
-  
-}
-.navSearch:active::before{
-  
-  content: url('./images/svgImg/csearchActive.svg.svg');
-  
-}
+//////////////////////////////////////

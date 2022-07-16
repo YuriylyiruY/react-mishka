@@ -1,11 +1,11 @@
 import React from "react";
-import NavHeader from "../components/NavHeader";
-import { AppContext } from "../App";
+import NavHeader from "../components/navHeader";
+
 
 export const Form = () => {
-  React.useContext(AppContext);
+  
   return (
-    <div className="App">
+    <div className="app">
       <div>Form</div>
       <NavHeader />
     </div>

@@ -23,18 +23,21 @@
   //  url("./OpenSans/OpenSans-ExtraBold.ttf") format("ttf");
 }
 
-@mixin font($weight,$size,$line-height) {
+@mixin font($weight, $size, $line-height) {
   font-weight: $weight;
   font-size: $size;
-  line-height:$line-height;
+  line-height: $line-height;
 }
-body{
-  margin:0;
-  
+body {
+  margin: 0;
 }
-.App {
+.app {
   font-family: "OpenSansMedium";
-  width:100%;
+  width: 100%;
   background-color: #ffffff;
 }
-
+.zov {
+  background-color: coral;
+  height: 500px;
+  width: 100%;
+}

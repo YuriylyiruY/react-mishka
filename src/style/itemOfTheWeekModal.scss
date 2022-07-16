@@ -1,0 +1,132 @@
+///////////////////////////////////
+//Modal
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+.itemOfTheWeek_ModalWrap {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 180%;
+  z-index: 3;
+}
+.itemOfTheWeek_Modal {
+  width: 319px;
+  height: 338px;
+  border-top: 1px solid #c6c6c6;
+  border-bottom: 1px solid #c6c6c6;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px 0 rgba($color: #000101, $alpha: 0.25);
+  border-radius: 1px;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_ModalWrap {
+    top: inherit;
+  }
+  .itemOfTheWeek_Modal {
+    width: 566px;
+    height: 336px;
+  }
+}
+.itemOfTheWeek_ModalFormTitle {
+  margin-top: 44px;
+  margin-bottom: 9px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_ModalFormTitle {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 57px;
+  }
+  .itemOfTheWeek_ModalFormTitle br {
+    display: none;
+  }
+}
+.itemOfTheWeek_ModalFormParagraph {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 26px;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_ModalFormParagraph {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+.itemOfTheWeek_ModalFormRadio {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 31px;
+}
+.itemOfTheWeek_RadioBtn {
+  width: 0;
+  height: 0;
+}
+.itemOfTheWeek_RadioBtnLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #444444;
+  width: 78px;
+  height: 52px;
+  border: 2px solid #c6c6c6;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_RadioBtnLabel {
+    width: 108px;
+  }
+}
+.itemOfTheWeek_RadioBtnLabelM {
+  margin: 0 5px 0 5px;
+}
+// .itemOfTheWeek_RadioBtnM:checked ~ .itemOfTheWeek_RadioBtnLabelM ,
+// .itemOfTheWeek_RadioBtnL:checked ~ .itemOfTheWeek_RadioBtnLabelL ,
+.itemOfTheWeek_RadioBtnS:checked ~ .itemOfTheWeek_RadioBtnLabelS {
+  border: 2px solid #63d1bb;
+ }
+.itemOfTheWeek_RadioBtnLChecked {
+  border: 2px solid #63d1bb;
+}
+.itemOfTheWeek_RadioSubmitWrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.itemOfTheWeek_RadioSubmit {
+  text-align: center;
+  background-color: #63d1bb;
+  border-style: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 260px;
+  height: 52px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_RadioSubmit {
+    width: 350px;
+  }
+}
+////////////////////////////////
+/// Modal Ajustment
+
+.itemOfTheWeek_ModalWrapNone {
+  display: none;
+}

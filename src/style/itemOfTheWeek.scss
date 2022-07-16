@@ -1,0 +1,378 @@
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+
+$heightImgItemOfWeek: calc(318px + (377) * ((100vw - 320px) / (800 - 320)));
+$widthImgItemOfWeek: calc(263px + (377) * ((100vw - 320px) / (800 - 320)));
+$heightImgItemOfWeekTablet: calc(
+  404px + (100) * ((100vw - 800px) / (950 - 800))
+);
+$widthImgItemOfWeekTablet: calc(
+  334px + (100) * ((100vw - 800px) / (950 - 800))
+);
+$heightBlockItemOfWeek: calc(733px + (631) * ((100vw - 320px) / (800 - 320)));
+
+.itemOfTheWeek {
+  background-color: #ffffff;
+  width: 100%;
+}
+.itemOfTheWeek_content {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_content {
+    width: 397px;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_content {
+    width: 88%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 950px) {
+  .itemOfTheWeek_content {
+    height: 504px;
+    //background-size: 434px 504px;
+  }
+}
+
+.itemOfTheWeek_img {
+  background-image: url("../style/images/img/basket-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: $widthImgItemOfWeek $heightImgItemOfWeek;
+  background-position: 50% 70%;
+  width: 100%;
+  height: $heightBlockItemOfWeek;
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_img {
+    background-size: 408px 463px;
+    height: 988px;
+    width: 507px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_img {
+    background-image: url("../style/images/img/basket-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-size: $widthImgItemOfWeekTablet $heightImgItemOfWeekTablet;
+    background-position: 90% 161px;
+    width: 100%;
+    height: calc(268px + (332) * ((100vw - 320px) / (800 - 320)));
+  }
+}
+
+@media (min-width: 950px) {
+  .itemOfTheWeek_img {
+    background-size: 434px 504px;
+    height: 705px;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_img {
+    background-image: url("../style/images/img/basket-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: 525px 636px;
+    background-position: 90% 41px;
+    width: 100%;
+    height: calc(268px + (332) * ((100vw - 320px) / (800 - 320)));
+    height: 745px;
+  }
+}
+
+.itemOfTheWeek_title {
+  width: 100%;
+  margin: 32px 0 8px 0;
+  font-size: calc(25px + (5) * ((100vw - 320px) / (506 - 320)));
+  font-weight: 700;
+  line-height: calc(1.5em);
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 506px) {
+  .itemOfTheWeek_title {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+@media (min-width: $medium) {
+  .itemOfTheWeek_title {
+    width: 70%;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50px;
+    margin: 56px 0 56px 0;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_title {
+    order: 2;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
+    margin: 89px 0 41px 26px;
+  }
+}
+.itemOfTheWeek_logo {
+  width: 100%;
+  color: #63d1bb;
+  font-size: 17px;
+  font-size: calc(17px + (2) * ((100vw - 320px) / (506 - 320)));
+  font-weight: 700;
+  line-height: calc(1.5em);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0 0 21px 0;
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_logo {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_logo {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    align-items: center;
+    line-height: 17px;
+    margin: 50px 0 8px 49px;
+    height: 64px;
+
+    font-size: calc(17px + (5) * ((100vw - 800px) / (1150 - 800)));
+    font-size: 17px;
+    font-weight: 700;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_logo {
+    order: 1;
+    width: 12%;
+    justify-content: flex-start;
+    line-height: 17px;
+    margin: 89px 0 8px 21px;
+    height: 64px;
+    font-size: 17px;
+    font-weight: 700;
+  }
+}
+.itemOfTheWeek_describtion {
+  width: 100%;
+  color: #444444;
+  font-size: 15px;
+  height: 76px;
+  font-size: calc(15px + (2) * ((100vw - 320px) / (506 - 320)));
+  font-weight: 400;
+  line-height: calc(1.5em);
+  margin: 0 0 33px 0;
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_describtion {
+    font-size: 17px;
+    line-height: 25px;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_describtion {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0;
+    height: 30%;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_describtion {
+    font-size: 17px;
+    line-height: 30px;
+    margin: 0;
+    height: 30%;
+  }
+}
+.itemOfTheWeek_logoBr {
+  display: none;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_logoBr {
+    display: block;
+  }
+}
+@media (min-width: 478px) {
+  .itemOfTheWeek_describtionBrFirst {
+    display: none;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_describtionBrFirst {
+    display: block;
+  }
+}
+.itemOfTheWeek_describtionBr {
+  display: none;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_describtionBr {
+    display: block;
+  }
+}
+.itemOfTheWeek_tableWrap {
+  width: 100%;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_tableWrap {
+    width: 46%;
+    height: calc(404px + (98) * ((100vw - 800px) / (950 - 800)));
+    width: calc(334px + (30) * ((100vw - 800px) / (950 - 800)));
+  }
+}
+@media (min-width: 950px) {
+  .itemOfTheWeek_tableWrap {
+    width: 364px;
+    height: 504px;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_tableWrap {
+    order: 3;
+    width: 288px;
+    height: 490px;
+    margin-left: calc(143px + (13) * ((100vw - 800px) / (950 - 800)));
+  }
+}
+
+.itemOfTheWeek_table {
+  display: flex;
+  align-items: center;
+  font-size: calc(15px + (2) * ((100vw - 320px) / (506 - 320)));
+  font-weight: 400;
+  line-height: 24px;
+  color: #444444;
+  width: 100%;
+  height: 8vw;
+  border-bottom: 1px solid #ececec;
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_table {
+    height: 42px;
+    font-size: 17px;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_table {
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    height: 9%;
+  }
+}
+
+.itemOfTheWeek_price {
+  display: flex;
+  justify-content: center;
+  color: #444444;
+  font-size: calc(17px + (2) * ((100vw - 320px) / (506 - 320)));
+  font-weight: 700;
+  line-height: 24px;
+  margin-top: calc(357px + (174) * ((100vw - 320px) / (506 - 320)));
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_price {
+    margin-top: 531px;
+    font-size: 19px;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_price {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    height: 21%;
+    align-items: flex-end;
+  }
+}
+.itemOfTheWeek_priceWrapBtn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_priceWrapBtn {
+    width: 100%;
+    align-items: flex-end;
+    height: 21%;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_priceWrapBtn {
+    height: 21%;
+  }
+}
+
+.itemOfTheWeek_orderBtn {
+  color: #444444;
+  border-style: none;
+  background-color: #ffffff;
+  border: 2px solid #444444;
+  font-size: calc(18px + (2) * ((100vw - 320px) / (506 - 320)));
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: calc(260px + (2) * ((100vw - 320px) / (506 - 320)));
+  height: calc(52px + (2) * ((100vw - 320px) / (506 - 320)));
+  margin-top: 39px;
+}
+@media (min-width: 506px) {
+  .itemOfTheWeek_orderBtn {
+    font-size: 20px;
+    width: 262px;
+    height: 54px;
+  }
+}
+@media (min-width: $medium) {
+  .itemOfTheWeek_orderBtn {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 21px;
+    width: 324px;
+    height: 52px;
+  }
+}
+
+.itemOfTheWeek_zigzag {
+  width: 100%;
+  height: 20px;
+  background-image: url("../style/images/svgImg/zigzagItemOfWeek.svg.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: $medium) {
+  .itemOfTheWeek_zigzag {
+    height: 25px;
+    background-size: 106% 25px;
+    margin-top: 0;
+  }
+}
+@media (min-width: $desktop) {
+  .itemOfTheWeek_zigzagWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .itemOfTheWeek_zigzag {
+    width: 88%;
+    height: 28px;
+    background-size: 118% 33px;
+    margin: 0;
+  }
+}

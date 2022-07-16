@@ -5,29 +5,24 @@ export const NavButton = () => {
   const navOpenList = () => {
     const navMenuOpen = document.querySelector(".navSandvichButton");
     const NavMenuClose = document.querySelector(".navCloseButton");
-    const color1 = document.querySelectorAll(".color1");
-    const color2 = document.querySelectorAll(".color2");
+    const navMediumPart = document.querySelectorAll(".navMediumPart");
 
     setState((state) => {
       return !state;
     });
-    console.log(state);
 
     if (state === false) {
       NavMenuClose.classList.remove("navHiddenClass");
       navMenuOpen.classList.add("navHiddenClass");
-      color1.forEach((item)=>item.classList.remove("navHiddenClass"));
-      color2.forEach((item)=>item.classList.remove("navHiddenClass"));
-      
+      navMediumPart.forEach((item) => item.classList.remove("navHiddenClass"));
     } else if (state === true) {
       NavMenuClose.classList.add("navHiddenClass");
       navMenuOpen.classList.remove("navHiddenClass");
-      color1.forEach((item)=>item.classList.add("navHiddenClass"));
-      color2.forEach((item)=>item.classList.add("navHiddenClass"));
+      navMediumPart.forEach((item) => item.classList.add("navHiddenClass"));
     }
   };
   return (
-    <div>
+    <div className="navButton">
       <svg
         className="navSandvichButton"
         width="20"

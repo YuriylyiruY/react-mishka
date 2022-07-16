@@ -1,0 +1,202 @@
+$medium: 800px;
+$mobile: 200px;
+$desktop: 1150px;
+
+.brieflyAboutUs_titleWrap {
+  margin: 33px auto;
+  width: 79%;
+}
+
+@media (min-width: $medium) {
+  .brieflyAboutUs_titleWrap {
+    width: 85%;
+  }
+}
+@media (min-width: $desktop) {
+  .brieflyAboutUs_titleWrap {
+    width: 50%;
+    margin-left: calc(194px + (19) * ((100vw - 800px) / (950 - 800)));
+  }
+}
+.brieflyAboutUs_title {
+  font-weight: 700;
+  font-size: 25px;
+  font-size: calc(25px + (2) * ((100vw - 320px) / (506 - 320)));
+  line-height: 30px;
+}
+@media (min-width: 506px) {
+  .brieflyAboutUs_title {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: $medium) {
+  .brieflyAboutUs_title {
+    margin: 0;
+    font-weight: 700;
+    font-size: calc(43px + (2) * ((100vw - 320px) / (506 - 320)));
+    line-height: 50px;
+  }
+}
+@media (min-width: $desktop) {
+  .brieflyAboutUs_title {
+    font-weight: 700;
+    font-size: calc(53px + (2) * ((100vw - 320px) / (506 - 320)));
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+.brieflyAboutUs_wrap {
+  width: 79%;
+  font-weight: 700;
+  font-size: 17px;
+  font-size: calc(17px + (2) * ((100vw - 320px) / (506 - 320)));
+  line-height: 20px;
+  margin: 0 auto;
+}
+@media (min-width: 506px) {
+  .brieflyAboutUs_wrap {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: $medium) {
+  .brieflyAboutUs_wrap {
+    width: 720px;
+    width: 85%;
+    font-weight: 700;
+    font-size: calc(20px + (2) * ((100vw - 320px) / (506 - 320)));
+    line-height: calc(22px + (2) * ((100vw - 320px) / (506 - 320)));
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+// @media (min-width: 950px) {
+//   .brieflyAboutUs_wrap {
+//     width: 85%;
+//   }
+// }
+@media (min-width: $desktop) {
+  .brieflyAboutUs_wrap {
+    
+    width: calc(373px + (112) * ((100vw - 800px) / (950 - 800)));
+    font-weight: 700;
+    font-size: calc(20px + (2) * ((100vw - 320px) / (506 - 320)));
+    font-size: 20px;
+    line-height: calc(22px + (2) * ((100vw - 320px) / (506 - 320)));
+    line-height: 22px;
+    margin-left: calc(194px + (19) * ((100vw - 800px) / (950 - 800)));
+    
+  }
+}
+.brieflyAboutUsLeftBlock_svg1 {
+  position: relative;
+}
+.brieflyAboutUsLeftBlock_svg2 {
+  position: relative;
+}
+.brieflyAboutUsLeftBlock_svg3 {
+  position: relative;
+}
+.brieflyAboutUsRightBlock_svg4 {
+  position: relative;
+}
+.brieflyAboutUsRightBlock_svg5 {
+  position: relative;
+}
+.brieflyAboutUsRightBlock_svg6 {
+  position: relative;
+}
+.brieflyAboutUsLeftBlock_svg1::after {
+  content: "";
+  background: url("./images/svgImg/icon-1.svg.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.brieflyAboutUsLeftBlock_svg2::after {
+  content: "";
+  background: url("./images/svgImg/icon-2.svg.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.brieflyAboutUsLeftBlock_svg3::after {
+  content: "";
+  background: url("./images/svgImg/icon-3.svg.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.brieflyAboutUsRightBlock_svg4::after {
+  content: "";
+  background: url("./images/svgImg/icon-4.svg.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.brieflyAboutUsRightBlock_svg5::after {
+  content: "";
+  background: url("./images/svgImg/icon-5.svg.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.brieflyAboutUsRightBlock_svg6::after {
+  content: "";
+  background: url("./images/svgImg/icon-6.svg.svg") no-repeat;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+}
+.brieflyAboutUsLeftBlock {
+  height: 91px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+@media (min-width: $medium) {
+  .brieflyAboutUsLeftBlock {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 25px;
+  }
+}
+.brieflyAboutUsRightBlock {
+  height: 91px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+@media (min-width: $medium) {
+  .brieflyAboutUsRightBlock {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 25px;
+  }
+}
+@media (min-width: $medium) {
+  .brieflyAboutUsRightBlock_wrap {
+   width: calc(323px + (88) * ((100vw - 800px) / (950 - 800)));
+   //width:100%;
+  }
+}
+@media (min-width: 950px) {
+  .brieflyAboutUsRightBlock_wrap {
+   width: calc(402px + (7) * ((100vw - 800px) / (950 - 800)));
+   //width:100%;
+  }
+}
+@media (min-width: $desktop) {
+  .brieflyAboutUsRightBlock_wrap {
+   width: 323px
+   
+  }
+}
